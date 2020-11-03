@@ -9,6 +9,17 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <name>Poller</name>
+    <developers>
+        <developer>
+            <name>Breyon Gunn</name>
+        </developer>
+    </developers>
+
+    <description>
+        Poller uses annotation executes methods after the specified amount of time has passed.
+    </description>
+
+    <url>https://github.com/SuperBGLazer/Poller</url>
 
     <scm>
         <url>https://github.com/SuperBGLazer/Poller</url>
@@ -76,6 +87,20 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
