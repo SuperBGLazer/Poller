@@ -30,6 +30,7 @@ public class Poller {
      *
      * @param method The static methods that needs executed
      * @param time The time in minutes
+     * @param timeUnit The time units
      */
     public Poller(Method method, long time, TimeUnit timeUnit) {
         this.method = method;

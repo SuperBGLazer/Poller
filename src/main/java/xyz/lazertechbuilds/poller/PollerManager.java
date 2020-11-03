@@ -33,16 +33,26 @@ public class PollerManager {
     private static final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
     private static int time = 60;
 
+    /**
+     * Setup the poller
+     * @param time The time in between polls
+     */
     public static void setup(int time) {
         PollerManager.time = time;
         setup();
     }
 
+    /**
+     * Setup the poller
+     */
     public static void setup() {
         getPollers();
         scheduleTask();
     }
 
+    /**
+     * Stop the poller
+     */
     public static void stop() {
         scheduler.shutdown();
     }
@@ -71,6 +81,9 @@ public class PollerManager {
 
     }
 
+    /**
+     * Poll all the Pollers
+     */
     public static void poll() {
         for (Poller poller :
                 pollerList) {
