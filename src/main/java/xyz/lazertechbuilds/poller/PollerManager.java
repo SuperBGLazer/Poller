@@ -17,7 +17,7 @@
  */
 package xyz.lazertechbuilds.poller;
 
-import org.reflections.Reflections;
+import org.reflections8.Reflections;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
